@@ -59,7 +59,7 @@ setupCrashReporter = ->
 setupAtomHome = ({setPortable}) ->
   return if process.env.ATOM_HOME
 
-  atomHome = path.join(app.getHomeDir(), '.atom')
+  atomHome = path.join(app.getHomeDir(), '.juno')
   AtomPortable = require './atom-portable'
 
   if setPortable and not AtomPortable.isPortableInstall(process.platform, process.env.ATOM_HOME, atomHome)
@@ -100,7 +100,7 @@ parseCommandLine = ->
                               Defaults to `~/github/atom`.
 
       ATOM_HOME               The root path for all configuration files and folders.
-                              Defaults to `~/.atom`.
+                              Defaults to `~/.juno`.
   """
   # Deprecated 1.0 API preview flag
   options.alias('1', 'one').boolean('1').describe('1', 'This option is no longer supported.')
@@ -112,8 +112,8 @@ parseCommandLine = ->
   options.alias('n', 'new-window').boolean('n').describe('n', 'Open a new window.')
   options.boolean('profile-startup').describe('profile-startup', 'Create a profile of the startup execution time.')
   options.alias('r', 'resource-path').string('r').describe('r', 'Set the path to the Atom source directory and enable dev-mode.')
-  options.boolean('safe').describe('safe', 'Do not load packages from ~/.atom/packages or ~/.atom/dev/packages.')
-  options.boolean('portable').describe('portable', 'Set portable mode. Copies the ~/.atom folder to be a sibling of the installed Atom location if a .atom folder is not already there.')
+  options.boolean('safe').describe('safe', 'Do not load packages from ~/.juno/packages or ~/.juno/dev/packages.')
+  options.boolean('portable').describe('portable', 'Set portable mode. Copies the ~/.juno folder to be a sibling of the installed Atom location if a .juno folder is not already there.')
   options.alias('t', 'test').boolean('t').describe('t', 'Run the specified specs and exit with error code on failures.')
   options.string('timeout').describe('timeout', 'When in test mode, waits until the specified time (in minutes) and kills the process (exit code: 130).')
   options.alias('v', 'version').boolean('v').describe('v', 'Print the version.')
