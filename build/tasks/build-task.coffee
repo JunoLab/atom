@@ -170,6 +170,7 @@ module.exports = (grunt) ->
     cp path.join('resources', 'app-icons', channel, 'png', '1024.png'), path.join(appDir, 'resources', 'atom.png')
 
     if process.platform is 'darwin'
+      cp path.join('resources', 'app-icons', 'stable', 'juno.icns'), path.resolve(appDir, '..', 'juno.icns')
       cp path.join('resources', 'app-icons', channel, 'atom.icns'), path.resolve(appDir, '..', 'atom.icns')
       cp path.join('resources', 'mac', 'file.icns'), path.resolve(appDir, '..', 'file.icns')
       cp path.join('resources', 'mac', 'speakeasy.pem'), path.resolve(appDir, '..', 'speakeasy.pem')

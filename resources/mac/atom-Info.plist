@@ -5,7 +5,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Juno</string>
 	<key>CFBundleIconFile</key>
-	<string>atom.icns</string>
+	<string>juno.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.junolab.juno</string>
 	<key>CFBundleInfoDictionaryVersion</key>
