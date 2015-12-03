@@ -10,7 +10,7 @@ portableModeCommonPlatformBehavior = (platform) ->
 
   describe "without ATOM_HOME environment variable", ->
     environmentAtomHome = undefined
-    portableAtomHomePath = path.join(path.dirname(process.execPath), "..", ".atom")
+    portableAtomHomePath = path.join(path.dirname(process.execPath), "..", ".juno")
     portableAtomHomeNaturallyExists = fs.existsSync(portableAtomHomePath)
     portableAtomHomeBackupPath =  "#{portableAtomHomePath}.temp"
 
@@ -24,11 +24,11 @@ portableModeCommonPlatformBehavior = (platform) ->
         fs.removeSync(portableAtomHomePath) if fs.existsSync(portableAtomHomePath)
       fs.removeSync(portableAtomHomeBackupPath) if fs.existsSync(portableAtomHomeBackupPath)
 
-    describe "with .atom directory sibling to exec", ->
+    describe "with .juno directory sibling to exec", ->
       beforeEach ->
         fs.mkdirSync(portableAtomHomePath) if not fs.existsSync(portableAtomHomePath)
 
-    describe "without .atom directory sibling to exec", ->
+    describe "without .juno directory sibling to exec", ->
       beforeEach ->
         fs.removeSync(portableAtomHomePath) if fs.existsSync(portableAtomHomePath)
 
@@ -36,7 +36,7 @@ portableModeCommonPlatformBehavior = (platform) ->
         expect(AtomPortable.isPortableInstall(platform, environmentAtomHome)).toBe false
 
 describe "Set Portable Mode on #win32", ->
-  portableAtomHomePath = path.join(path.dirname(process.execPath), "..", ".atom")
+  portableAtomHomePath = path.join(path.dirname(process.execPath), "..", ".juno")
   portableAtomHomeNaturallyExists = fs.existsSync(portableAtomHomePath)
   portableAtomHomeBackupPath =  "#{portableAtomHomePath}.temp"
 

@@ -507,8 +507,8 @@ class AtomApplication
   #                   completion.
   #   :resourcePath - The path to include specs from.
   #   :specPath - The directory to load specs from.
-  #   :safeMode - A Boolean that, if true, won't run specs from ~/.atom/packages
-  #               and ~/.atom/dev/packages, defaults to false.
+  #   :safeMode - A Boolean that, if true, won't run specs from ~/.juno/packages
+  #               and ~/.juno/dev/packages, defaults to false.
   runTests: ({headless, resourcePath, executedFrom, pathsToOpen, logFile, safeMode, timeout}) ->
     if resourcePath isnt @resourcePath and not fs.existsSync(resourcePath)
       resourcePath = @resourcePath

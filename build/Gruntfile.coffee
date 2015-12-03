@@ -85,7 +85,7 @@ module.exports = (grunt) ->
     killCommand ='pkill -9 atom'
 
   installDir = path.resolve(installDir)
-  electronDownloadDir = path.join(homeDir, '.atom', 'electron')
+  electronDownloadDir = path.join(homeDir, '.juno', 'electron')
 
   coffeeConfig =
     glob_to_multiple:
@@ -127,7 +127,7 @@ module.exports = (grunt) ->
   csonConfig =
     options:
       rootObject: true
-      cachePath: path.join(homeDir, '.atom', 'compile-cache', 'grunt-cson')
+      cachePath: path.join(homeDir, '.juno', 'compile-cache', 'grunt-cson')
 
     glob_to_multiple:
       expand: true

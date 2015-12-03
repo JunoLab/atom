@@ -30,6 +30,6 @@ artifacts:
   - path: atom-build
 
 cache:
-  - '%USERPROFILE%\.atom\.apm'
-  - '%USERPROFILE%\.atom\.node-gyp\.atom'
-  - '%USERPROFILE%\.atom\.npm'
+  - '%USERPROFILE%\.juno\.apm'
+  - '%USERPROFILE%\.juno\.node-gyp\.juno'
+  - '%USERPROFILE%\.juno\.npm'

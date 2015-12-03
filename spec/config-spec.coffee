@@ -665,8 +665,8 @@ describe "Config", ->
         spyOn(CSON, 'writeFileSync')
         jasmine.unspy atom.config, 'save'
 
-      describe "when ~/.atom/config.json exists", ->
-        it "writes any non-default properties to ~/.atom/config.json", ->
+      describe "when ~/.juno/config.json exists", ->
+        it "writes any non-default properties to ~/.juno/config.json", ->
           atom.config.set("a.b.c", 1)
           atom.config.set("a.b.d", 2)
           atom.config.set("x.y.z", 3)
@@ -1058,7 +1058,7 @@ describe "Config", ->
         fs.removeSync(dotAtomPath)
 
       describe "when the configDirPath doesn't exist", ->
-        it "copies the contents of dot-atom to ~/.atom", ->
+        it "copies the contents of dot-atom to ~/.juno", ->
           initializationDone = false
           jasmine.unspy(window, "setTimeout")
           atom.config.initializeConfigDirectory ->

@@ -425,9 +425,9 @@ class AtomEnvironment extends Model
   #     reusing existing windows depending on the paths to open.
   #   * `devMode` A {Boolean}, true to open the window in development mode.
   #     Development mode loads the Atom source from the locally cloned
-  #     repository and also loads all the packages in ~/.atom/dev/packages
+  #     repository and also loads all the packages in ~/.juno/dev/packages
   #   * `safeMode` A {Boolean}, true to open the window in safe mode. Safe
-  #     mode prevents all packages installed to ~/.atom/packages from loading.
+  #     mode prevents all packages installed to ~/.juno/packages from loading.
   open: (params) ->
     @applicationDelegate.open(params)
 

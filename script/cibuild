@@ -105,7 +105,7 @@ cp.safeExec.bind(global, 'npm install npm --loglevel error', {cwd: path.resolve(
   cp.safeExec.bind(global, 'node script/bootstrap', function(error) {
     if (error)
       process.exit(1);
-    require('fs-plus').removeSync.bind(global, path.join(homeDir, '.atom'))
+    require('fs-plus').removeSync.bind(global, path.join(homeDir, '.juno'))
     var async = require('async');
     var gruntPath = path.join('build', 'node_modules', '.bin', 'grunt') + (process.platform === 'win32' ? '.cmd' : '');
     var tasks = [

@@ -6,7 +6,7 @@ module.exports =
 class AtomPortable
   @getPortableAtomHomePath: ->
     execDirectoryPath = path.dirname(process.execPath)
-    path.join(execDirectoryPath, '..', '.atom')
+    path.join(execDirectoryPath, '..', '.juno')
 
   @setPortable: (existingAtomHome) ->
     fs.copySync(existingAtomHome, @getPortableAtomHomePath())

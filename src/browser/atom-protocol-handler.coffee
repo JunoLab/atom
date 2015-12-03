@@ -9,9 +9,9 @@ protocol = require 'protocol'
 # custom resource loader for 'atom://' URLs.
 #
 # The following directories are searched in order:
-#   * ~/.atom/assets
-#   * ~/.atom/dev/packages (unless in safe mode)
-#   * ~/.atom/packages
+#   * ~/.juno/assets
+#   * ~/.juno/dev/packages (unless in safe mode)
+#   * ~/.juno/packages
 #   * RESOURCE_PATH/node_modules
 #
 module.exports =
