@@ -38,7 +38,7 @@ module.exports =
             type: 'string'
       themes:
         type: 'array'
-        default: ['one-dark-ui', 'one-dark-syntax']
+        default: ['one-light-ui', 'one-light-syntax']
         items:
           type: 'string'
         description: 'Names of UI and syntax themes which will be used when Atom starts.'
@@ -127,7 +127,7 @@ module.exports =
         description: 'The name of the font family used for editor text.'
       fontSize:
         type: 'integer'
-        default: 14
+        default: 12
         minimum: 1
         maximum: 100
         description: 'Height in pixels of editor text.'
