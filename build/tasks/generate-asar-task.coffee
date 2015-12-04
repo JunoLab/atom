@@ -16,6 +16,7 @@ module.exports = (grunt) ->
       'ctags-win32.exe'
       '**/node_modules/spellchecker/**'
       '**/resources/atom.png'
+      '**/julia-client/script/**'
     ]
     unpack = "{#{unpack.join(',')}}"
 
