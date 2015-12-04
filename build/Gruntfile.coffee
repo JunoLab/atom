@@ -31,6 +31,8 @@ module.exports = (grunt) ->
   # This allows all subsequent paths to the relative to the root of the repo
   grunt.file.setBase(path.resolve('..'))
 
+  # grunt.task.run 'local-packages'
+
   # Options
   installDir = grunt.option('install-dir')
   buildDir = grunt.option('build-dir')
