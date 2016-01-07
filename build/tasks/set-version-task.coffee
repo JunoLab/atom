@@ -44,13 +44,13 @@ module.exports = (grunt) ->
         spawn {cmd, args}, (error, result, code) -> done(error)
       else if process.platform is 'win32'
         shellAppDir = grunt.config.get('atom.shellAppDir')
-        shellExePath = path.join(shellAppDir, 'atom.exe')
+        shellExePath = path.join(shellAppDir, 'juno.exe')
 
         strings =
-          CompanyName: 'GitHub, Inc.'
-          FileDescription: 'Atom'
-          LegalCopyright: 'Copyright (C) 2015 GitHub, Inc. All rights reserved'
-          ProductName: 'Atom'
+          CompanyName: 'Julia Computing, Inc.'
+          FileDescription: 'Juno'
+          LegalCopyright: 'Copyright (C) 2015 Julia Computing, Inc. All rights reserved'
+          ProductName: 'Juno'
           ProductVersion: version
 
         rcedit = require('rcedit')
