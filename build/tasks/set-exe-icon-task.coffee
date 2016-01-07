@@ -7,7 +7,7 @@ module.exports = (grunt) ->
     channel = grunt.config.get('atom.channel')
     shellAppDir = grunt.config.get('atom.shellAppDir')
     shellExePath = path.join(shellAppDir, 'juno.exe')
-    iconPath = path.resolve('resources', 'app-icons', channel, 'atom.ico')
+    iconPath = path.resolve('resources', 'app-icons', channel, 'juno.ico')
 
     rcedit = require('rcedit')
     rcedit(shellExePath, {'icon': iconPath}, done)
