@@ -1,6 +1,6 @@
 {
-  "name": "atom",
-  "productName": "Atom",
+  "name": "juno",
+  "productName": "Juno",
   "version": "1.4.1",
   "description": "A hackable text editor for the 21st Century.",
   "main": "./src/browser/main.js",
