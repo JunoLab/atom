@@ -231,8 +231,8 @@ exports.handleStartupEvent = (app, squirrelCommand) ->
   switch squirrelCommand
     when '--squirrel-install'
       createShortcuts ->
-        installContextMenu ->
-          addCommandsToPath ->
+      #   installContextMenu ->
+      #     addCommandsToPath ->
             app.quit()
       true
     when '--squirrel-updated'
@@ -243,8 +243,8 @@ exports.handleStartupEvent = (app, squirrelCommand) ->
       true
     when '--squirrel-uninstall'
       removeShortcuts ->
-        uninstallContextMenu ->
-          removeCommandsFromPath ->
+      #   uninstallContextMenu ->
+      #     removeCommandsFromPath ->
             app.quit()
       true
     when '--squirrel-obsolete'

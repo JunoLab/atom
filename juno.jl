@@ -23,6 +23,7 @@ end
 # Atom Build
 
 isdir("out/juno") && rm("out/juno", recursive=true)
+isdir("out/installer") && rm("out/installer", recursive=true)
 
 run(`node script/build --build-dir=out --no-install --channel=stable
                        --no-auto-update --julia-version=$ver`)

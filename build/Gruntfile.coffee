@@ -261,11 +261,11 @@ module.exports = (grunt) ->
       installer:
         appDirectory: shellAppDir
         outputDirectory: path.join(buildDir, 'installer')
-        authors: 'GitHub Inc.'
-        loadingGif: path.resolve(__dirname, '..', 'resources', 'win', 'loading.gif')
+        authors: 'Julia Computing, Inc.'
+        loadingGif: path.resolve(__dirname, '..', 'resources', 'win', 'installer.gif')
         iconUrl: "https://raw.githubusercontent.com/atom/atom/master/resources/app-icons/#{channel}/atom.ico"
-        setupIcon: path.resolve(__dirname, '..', 'resources', 'app-icons', channel, 'atom.ico')
-        remoteReleases: "https://atom.io/api/updates?version=#{metadata.version}"
+        setupIcon: path.resolve(__dirname, '..', 'resources', 'app-icons', channel, 'juno.ico')
+        # remoteReleases: "https://atom.io/api/updates?version=#{metadata.version}"
 
     shell:
       'kill-atom':
@@ -297,6 +297,7 @@ module.exports = (grunt) ->
   grunt.registerTask('ci', ciTasks)
 
   defaultTasks = ['download-electron', 'download-electron-chromedriver', 'build', 'set-version', 'generate-asar', 'copy-julia']
+  defaultTasks.push('create-windows-installer') if process.platform == 'win32'
   unless process.platform is 'linux' or grunt.option('no-install')
     defaultTasks.push 'install'
   grunt.registerTask('default', defaultTasks)
